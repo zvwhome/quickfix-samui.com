@@ -55,7 +55,7 @@ export default function Contact() {
     }, [values]);
 
     return (
-      <button className={styles.btn} type="primary" /*disabled={!clear}*/>
+      <button className={styles.btn} type="primary" disabled={!clear}>
         SEND MESSAGE
       </button>
     );
