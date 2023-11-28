@@ -1,0 +1,89 @@
+.container {
+    max-width: var(--max-width);
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    /*padding: 8px 10px;*/
+    text-align: center;
+    /*position: relative;*/
+    height: 40px;
+}
+
+.footerDescription {
+    font-size: clamp(0.5em, 3vw, 1em);
+}
+
+.chatBlock {
+    height: 0;
+    transition: height 0.2s linear;
+    border: 1px solid #ef6324;
+    margin: auto;
+}
+
+
+.active {
+    height: 600px;
+}
+
+.absolute {
+    position: absolute;
+    /*transform: translateY(-100%);*/
+    right: 10%;
+    bottom: 40px;
+}
+
+.chatContainer {
+    width: 300px;
+    z-index: 1;
+}
+
+.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 10%;
+    transform: translateY(0);
+}
+
+.chatWrap {
+    position: relative;
+}
+
+.chatBtn {
+
+    background-color: #ef6324;
+    color: #fff;
+    font-size: 18px;
+    border: none;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    padding: 5px 0;
+    width: 300px;
+    cursor: pointer;
+    font-family: Neo-latina, sans-serif;
+}
+
+
+@media screen and (max-width: 576px) {
+    .absolute {
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+}
+
+@media screen and (max-width: 320px) {
+    .chatContainer {
+        width: 100%;
+        /*right: 0;*/
+
+    }
+    .chatBtn {
+        width: 100%;
+    }
+    .fixed {
+        right: 0;
+        bottom: 40px;
+    }
+}
