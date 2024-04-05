@@ -1,8 +1,8 @@
-"use client";
+//"use client";
 import styles from "./hero.module.css";
 import Image from "next/image";
 import hero from "public/hero.webp";
-import logo from "public/logo.svg";
+import logo from "public/logo.png";
 
 export default function Hero() {
   return (

@@ -21,9 +21,9 @@
 .logoImg {
     position: absolute;
     width: 30%;
-    height: 30%;
+    height: 40%;
     bottom: 50%;
-    transform: translateY(50%);
+    transform: translateY(50%) ;
 }
 
 @media screen and (max-width: 576px) {
