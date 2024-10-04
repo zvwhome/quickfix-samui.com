@@ -200,15 +200,17 @@ export default function Contact() {
             </div>
           </div>
           <div className={styles.addressGroupContainer}>
-            {/*<div className={styles.addressRecord}>
-              <Image className={styles.phoneIcon} src={phone} alt={"Phone"} />
-              <a
-                href={"tel:+66960435091"}
-                className={styles.addressRecordDescription}
-              >
-                +66 [0] 960 453 5091
-              </a>
-            </div>*/}
+            {
+              <div className={styles.addressRecord}>
+                <Image className={styles.phoneIcon} src={phone} alt={"Phone"} />
+                <a
+                  href={"tel:+66649963987"}
+                  className={styles.addressRecordDescription}
+                >
+                  +66 [0] 649 963 987
+                </a>
+              </div>
+            }
             <div className={styles.addressRecord}>
               <Image className={styles.mailIcon} src={mail} alt={"Mail"} />
               <a
@@ -257,17 +259,19 @@ export default function Contact() {
                   alt={"Facebook"}
                 />
               </a>
-              {/*<a
-                target={"_blank"}
-                className={styles.socialLink}
-                href={"https://wa.me/66960435091"}
-              >
-                <Image
-                  src={wa}
-                  className={styles.socialSectionImg}
-                  alt={"WhatsApp"}
-                />
-              </a>*/}
+              {
+                <a
+                  target={"_blank"}
+                  className={styles.socialLink}
+                  href={"https://wa.me/66649963987"}
+                >
+                  <Image
+                    src={wa}
+                    className={styles.socialSectionImg}
+                    alt={"WhatsApp"}
+                  />
+                </a>
+              }
             </div>
           </div>
         </div>
