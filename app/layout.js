@@ -9,6 +9,12 @@ export const metadata = {
   keywords:
     " Construction, Repair, Samui, building, house, electrician, Plumber, builder, handyman, handcraft, koh Samui, craftsman, Constructionwork,",
   metadataBase: new URL("https://quickfix-samui.com/"),
+  authors: [
+    {
+      name: "Igor Sobolev",
+      url: "https://www.linkedin.com/in/igor-sobolev-33433724a/",
+    },
+  ],
 };
 
 export default function RootLayout({ children }) {
