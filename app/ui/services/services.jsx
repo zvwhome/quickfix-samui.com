@@ -16,14 +16,14 @@ export default function Services() {
     <div id={"services"} className={styles.container}>
       <h1 className={styles.mainHeader}>THE ALL AROUND HOUSE FIXERS</h1>
       <div className={styles.cardSection}>
-        <div className={styles.card}>
+        {/*<div className={styles.card}>
           <Image
             className={styles.cardImg}
             src={security}
             alt={"Electronics and security"}
           />
           <p className={styles.cardHeader}>ELECTRONIC & SECURITY</p>
-        </div>
+        </div>*/}
         <div className={styles.card}>
           <Image
             className={styles.cardImg}
