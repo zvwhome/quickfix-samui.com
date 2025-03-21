@@ -2,6 +2,8 @@ import "./globals.css";
 import Header from "@/app/ui/header/header";
 import Footer from "@/app/ui/footer/footer";
 import Script from "next/script";
+import Menu from "@/app/ui/menu/Menu";
+import styles from "./page.module.css";
 
 export const metadata = {
   title: "QUICK FIX Samui",
@@ -48,9 +50,10 @@ export default function RootLayout({ children }) {
             `}
         </Script>
         <header>
-          <Header />
+          {/*<Header />*/}
+          <Menu />
         </header>
-        {children}
+        <main className={styles.main}>{children}</main>
         <footer>
           <Footer />
         </footer>

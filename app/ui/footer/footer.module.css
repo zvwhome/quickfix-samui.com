@@ -1,19 +1,11 @@
 .container {
     max-width: var(--max-width);
     margin: auto;
-    display: flex;
-    justify-content: center;
-    color: white;
-    align-items: center;
-    /*padding: 8px 10px;*/
-    text-align: center;
-    /*position: relative;*/
-    height: 40px;
+    padding: var(--desktopPadding);
+    height: 450px;
 }
 
-.footerDescription {
-    font-size: clamp(0.5em, 3vw, 1em);
-}
+
 
 .chatBlock {
     height: 0;
@@ -29,9 +21,8 @@
 
 .absolute {
     position: absolute;
-    /*transform: translateY(-100%);*/
-    right: 10%;
-    bottom: 40px;
+    right: 1%;
+    bottom: 450px;
 }
 
 .chatContainer {
@@ -42,7 +33,7 @@
 .fixed {
     position: fixed;
     bottom: 0;
-    right: 10%;
+    right: 1%;
     transform: translateY(0);
 }
 
@@ -64,14 +55,208 @@
     font-family: Neo-latina, sans-serif;
 }
 
+.logoSection {
+    width: 15%;
+    text-align: left;
+    display: block;
+}
+
+.logoImg {
+    width: 70%;
+    height: auto;
+    object-fit: contain;
+    margin-bottom: 10px;
+}
+
+
+.contactsSection {
+    display: flex;
+    justify-content: space-between;
+}
+.addressSection {
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    text-align: left;
+}
+.addressSubsection, .menuItem, .byKia {
+    font-size: clamp(12px, 1.5vw, 18px );
+}
+
+.byKia {
+    text-align: center;
+}
+
+
+.product {
+    font-size: clamp(16px, 1.5vw, 22px );
+    margin-bottom: 25px;
+}
+
+.link {
+    display: block;
+}
+
+
+.menuSection {
+    width: 20%;
+    text-align: left;
+}
+
+.menuItem {
+    position: relative;
+
+    display: block;
+    margin-bottom: 5px;
+
+}
+
+.menuItem:before {
+    position: absolute;
+    content: "";
+    height: 60%;
+    border-left: 2px solid var(--main-background-button-color);
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all .3s ease-in-out;
+}
+.menuItem:hover:before {
+    border-left: 8px solid var(--main-background-button-color);
+}
+
+.socialSection {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 auto 25px;
+}
+
+.socialIcon {
+    width: 50px;
+    height: auto;
+    object-fit: contain;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.socialIcon:hover {
+    transform: scale(110%);
+}
+
+.socialIcon:first-child {
+    margin-right: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+    .addressSection {
+        width: 50%;
+    }
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .container {
+        height: 520px;
+        padding: var(--mobilePadding);
+    }
+    .absolute {
+        bottom: 520px;
+    }
+    .product {
+        text-align: center;
+        margin-bottom: 15px;
+    }
+    .logoImg {
+        width: 20%;
+        text-align: center;
+        margin: auto;
+    }
+
+    .addressSection {
+        display: block;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+    .contactsSection {
+        display: block;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+    }
+
+    .menuSection {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+    .addressSection {
+        display: block;
+        width: 100%;
+        margin: auto;
+        text-align: center;
+
+
+    }
+    .addressSubsection {
+        margin-bottom: 10px;
+        display: block;
+        width: 100%;
+
+        text-align: center;
+    }
+
+    .menuItem {
+        text-decoration: underline var(--main-background-button-color);
+        text-underline-offset: 2px;
+        margin-bottom: 10px;
+    }
+
+    .menuItem:before {
+        display: none;
+    }
+
+    .logoSection {
+        width: 100%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+
+
+}
+
 
 @media screen and (max-width: 576px) {
-    .absolute {
+    .active {
+        height: 300px;
+    }
+  .byKia {
+      font-size: 9px;
+      text-align: center;
+  }
+    .absolute, .fixed {
         right: 50%;
         transform: translateX(50%);
     }
 
+    .logoImg {
+        width: 30%;
+    }
+    .chatBtn {
+        font-size: 16px;
+    }
 }
+
+
+@media screen and (max-width: 386px){
+    .addressSubsection {
+        font-size: 14px;
+    }
+}
+
 
 @media screen and (max-width: 320px) {
     .chatContainer {
@@ -81,9 +266,12 @@
     }
     .chatBtn {
         width: 100%;
+
     }
-    .fixed {
-        right: 0;
-        bottom: 40px;
+
+    .logoImg {
+        width: 40%;
     }
+
+
 }

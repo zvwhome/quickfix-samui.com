@@ -1,13 +1,17 @@
 .container {
-    text-align: center;
-    max-width: var(--max-width);
-    margin: 0 auto;
+    margin: 0 auto 25px;
     width: 100%;
+    padding: 25px 10px 50px;
+    background-color: var(--main-background-dark-color);
+}
+
+.inner {
+    text-align: center;
+    margin: auto;
+    max-width: var(--max-width);
     display: flex;
     flex-direction: column;
-    padding: 25px 5px 50px;
     align-items: center;
-    background-color: var(--main-background-dark-color);
 }
 
 .mainHeader {
@@ -18,54 +22,70 @@
 }
 
 .cardSection {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 80%;
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 80%;
+    margin-bottom: 50px;
 }
 
 .card {
     display: flex;
     flex-direction: column;
     position: relative;
-    width: 20%;
-    border-radius: 20px;
-    padding: 10px 5px;
-    /*min-width: 150px;*/
-    margin: 25px 5px;
+    width: 100%;
+    align-items: center;
 }
 
 .cardHeader {
     font-size: 1em;
     color: white;
-    padding-top: 50px;
     white-space: nowrap;
 }
 
+.cardDescription {
+    font-size: .85em;
+    color: white;
+    text-align: left;
+}
+
 .cardImg {
-    position: absolute;
-    transform:  translate(-50%, -50%);
     object-fit: contain;
-    width: 20%;
-    top: 0;
-    left: 50%;
+    width: 70px;
+    height: 70px;
+    margin-bottom: 15px;
 }
 
 @media screen and (max-width: 992px) {
     .cardHeader {
         font-size: 0.8em;
     }
+
+    .cardSection {
+        max-width: 100%;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
     .cardSection {
         width: 100%;
+        grid-template-columns: repeat(3, 1fr);
     }
 }
 
 @media screen and (max-width: 576px) {
+
+    .container {
+        margin: 0 ;
+
+    }
+
     .cardSection {
-        /*flex-direction: column;*/
-        width: 100%;
-        align-items: center;
-        justify-content: space-between;
+        grid-template-columns: repeat(2, 1fr);
+        margin: 0;
+
 
     }
     .card {
@@ -75,22 +95,34 @@
 
     .cardHeader {
         white-space: normal;
-        padding-top: 25px;
+
+    }
+
+    .cardImg {
+        width: 50px;
+        height: 50px;
     }
 
     .mainHeader {
-        width: 80%;
-        font-size: 2em;
+        width: 100%;
+        font-size: 18px;
+        margin-bottom: 10px;
+
     }
 }
 
-@media screen and (max-width: 380px) {
-    .card {
-        width: 25%;
-        justify-content: left;
-    }
+@media screen and (max-width: 320px) {
 
     .cardSection {
-        justify-content: left;
+        grid-template-columns: repeat(1, 1fr);
+        /*justify-content: left;*/
+    }
+
+    .cardImg {
+        margin-bottom: 10px;
+    }
+
+    .mainHeader {
+        font-size: 1em;
     }
 }

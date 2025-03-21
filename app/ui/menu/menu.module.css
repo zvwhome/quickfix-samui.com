@@ -1,0 +1,319 @@
+.container {
+    transition: all .5s linear;
+    background: transparent;
+}
+
+.scrolled {
+   /*background-color: rgba(245,135,32, .3);*/
+    background-color: white;
+
+}
+
+.mobile {
+    display: none;
+}
+
+.deskTop {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 10px;
+}
+
+.logoSection {
+ width: 20%;
+}
+
+
+.logoImgContent  {
+    width: 50%;
+    height: auto;
+    margin-right: 5px;
+
+}
+
+.logoContainer {
+
+}
+
+.logoItem {
+    margin-bottom: 0;
+}
+
+
+.navSection {
+    max-width: var(--max-width);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navItem {
+    padding: 0 15px;
+    transition: outline-color .3s ease-in-out;
+    white-space: nowrap;
+    font-size: clamp(14px, 1.5vw, 18px);
+    text-decoration: none;
+    cursor: pointer;
+    outline: 2px solid transparent ;
+    position: relative;
+
+}
+
+
+
+.linkText {
+    position: relative;
+}
+
+.linkText:before {
+    position: absolute;
+    content: "";
+    height: 60%;
+    border-left: 2px solid var(--main-background-button-color);
+    left: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.inActive:before, .inActive:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    right: 50%;
+    bottom: -5px;
+    background: var(--main-background-button-color);
+    height: 2px;
+    -webkit-transition-property: left, right, width;
+    transition-property: left, right, width;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+}
+
+.inActive:hover:before, .inActive:focus:before,  .inActive:active:before  {
+    left: 50%;
+    right: 10%;
+}
+
+.inActive:hover:after, .inActive:focus:after,  .inActive:active:after  {
+    left: 10%;
+    right: 50%;
+}
+
+.active:before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    left: 10%;
+    right: 10%;
+    bottom: -5px;
+    background: var(--main-background-button-color);
+    height: 2px;
+}
+
+/*----------Mobile menu-------------*/
+/*-------burger--------*/
+
+
+.burger {
+    /* left: 20px;*/
+    width: 36px;
+    height: 20px;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-self: center;
+    border: none;
+    padding: 0;
+    position: relative;
+    transition: visibility .3s ease-in-out, opacity .3s ease-in-out, transform 3s ease-in-out;
+    cursor: pointer;
+    box-shadow: none
+;
+
+}
+
+.burgerSpan {
+    padding: 0;
+    background-color: var(--main-background-button-color);
+    height: 2px;
+    width: 100%;
+    transition: transform .3s ease-in-out, width .3s ease-in-out, opacity .2s ease-in-out;
+
+}
+
+.open.burgerSpan:first-child {
+
+    transform: rotate(-45deg) translate(-4px, 9px);
+}
+
+.open .burgerSpan:nth-child(2) {
+    opacity: 0;
+}
+
+.open .burgerSpan:last-child {
+    transform: rotate(45deg) translate(-3px, -8px);
+}
+
+
+.burgerBtn {
+    /*width: 33%;*/
+    position: relative;
+    z-index: 100;
+}
+/*-------burger-end------*/
+
+.mobileHeader {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 3;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.mobileMenu {
+    height: 100vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding:  10px;
+    transition: all .3s ease-in-out;
+    transform: translateX(-150%);
+    position: absolute;
+    width: 100%;
+    background-color: var(--main-background-button-color);
+    font-weight: 600;
+    color: #fdfbd3;
+    z-index: 3;
+    top: 58px;
+}
+
+.mobileMenuActive {
+    transform: translateX(0);
+
+}
+
+.openDrawer {
+    background-color: var(--background);
+}
+
+@media screen and (max-width: 968px) {
+    .linkText:before {
+        left: -5px;
+    }
+    .navItem {
+        font-size: clamp(11px, 1.4vw, 14px);
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+
+    .linkText:before {
+        display: none;
+    }
+
+    .scrolled {
+      /*  background-color: transparent;*/
+    }
+    .deskTop {
+        display: none;
+    }
+
+    .navItem {
+        padding: 5px 0;
+    }
+
+    .mobile {
+        display: block;
+        padding: 5px 0;
+    }
+
+
+    .logoItem, .logoContainer {
+        width: auto;
+        margin: auto;
+    }
+
+    .logoImgContent {
+        margin: 0;
+        width: 80px;
+    }
+
+
+    .inActive:hover:before, .inActive:focus:before,  .inActive:active:before  {
+        display: none;
+    }
+    .inActive:before, .inActive:after {
+        display: none;
+    }
+
+    .active {
+        outline-color: transparent;
+    }
+
+    .navItem {
+        margin-bottom: 20px;
+        font-size: 25px;
+    }
+
+
+
+    .logoText {
+        font-size: 16px;
+    }
+
+    .logoSpan, .bottomLogoText {
+        font-size: 6px;
+    }
+
+    .bottomLogoText {
+        letter-spacing: 1px;
+    }
+
+
+}
+
+@media screen and (max-width: 380px) {
+    .logoContainer {
+     /*   width: 100px;*/
+    }
+
+    .navItem {
+        font-size: 18px;
+    }
+
+    /*.mobileMenu {
+        top: 42px;
+    }*/
+
+    .logoContainer {
+        justify-content: center;
+
+    }
+    .logoImgContent {
+        /*width: 50%;*/
+    }
+
+
+}
+
+@media screen and (max-width: 280px) {
+    .logoContainer {
+        width: 90px;
+    }
+
+
+
+}

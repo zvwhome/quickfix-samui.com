@@ -1,0 +1,107 @@
+.logoItem {
+    margin-bottom: 0;
+    padding: 0 15px;
+    transition: outline-color .3s ease-in-out;
+    white-space: nowrap;
+    font-size: clamp(14px, 1.5vw, 18px);
+    text-decoration: none;
+    cursor: pointer;
+    outline: 2px solid transparent ;
+    position: relative;
+}
+
+.logoContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoImgContent  {
+    width: 20%;
+    height: auto;
+    margin-right: 5px;
+}
+
+
+.logoTextContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logoText {
+    font-size: clamp(18px, 1.5vw, 20px);
+}
+
+.logoSpan, .bottomLogoText {
+    font-size: 8px;
+}
+
+.bottomLogoText {
+    letter-spacing: 3px;
+}
+@media screen and (max-width: 968px) {
+
+    .logoItem {
+        font-size: clamp(11px, 1.4vw, 14px);
+    }
+}
+
+@media screen and (max-width: 768px){
+    .logoItem {
+        padding: 5px 0;
+
+        font-size: 25px;
+    }
+    .logoContainer {
+        width: 200px;
+        margin: auto;
+    }
+
+    .logoText {
+        font-size: 16px;
+    }
+
+    .logoSpan, .bottomLogoText {
+        font-size: 6px;
+    }
+
+    .bottomLogoText {
+        letter-spacing: 1px;
+    }
+    .logoItem {
+        margin-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .logoContainer {
+        width: 100px;
+    }
+
+    .logoItem {
+        font-size: 18px;
+    }
+    .logoTextContainer {
+        display: none;
+    }
+
+    .logoContainer {
+        justify-content: center;
+
+    }
+    .logoImgContent {
+        width: 50%;
+    }
+}
+
+
+@media screen and (max-width: 280px) {
+    .logoContainer {
+        width: 90px;
+    }
+
+
+
+}
+
