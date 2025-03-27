@@ -25,7 +25,7 @@
     display: grid;
     gap: 1rem;
     grid-template-columns: repeat(4, 1fr);
-    max-width: 80%;
+
     margin-bottom: 50px;
 }
 
@@ -83,13 +83,14 @@
     }
 
     .cardSection {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(1, 1fr);
         margin: 0;
+        gap: 1rem;
 
 
     }
     .card {
-        font-size: 12px;
+        font-size: 16px;
         /*width: 30%;*/
     }
 

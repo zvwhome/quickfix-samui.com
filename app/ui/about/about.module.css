@@ -2,14 +2,14 @@
     max-width: var(--max-width);
     display: flex;
     justify-content: space-between;
-    padding: 0 10px;
     margin-bottom: 25px;
+    padding: var(--desktopPadding);
 }
 
 .descriptionSection {
     padding-right: 20px;
     text-align: left;
-    width: 70%;
+    width: 80%;
     margin: auto;
 }
 
@@ -26,7 +26,7 @@
 
 
 .imageSection {
-    width: 30%;
+    width: 20%;
     border-radius: 20px;
 }
 
@@ -47,6 +47,7 @@
 }
      .descriptionSection {
         width: 100%;
+         padding: 0;
     }
 
      .imageSection {
@@ -67,7 +68,7 @@
         border-radius: 0;
     }
     .container {
-        padding: 0;
+        padding: var(--mobilePadding);
     }
     .descriptionSection {
         padding: 5px;

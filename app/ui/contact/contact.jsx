@@ -154,7 +154,7 @@ export default function Contact() {
     <div id={"contactWrap"} className={styles.container}>
       <div id={"contact"}></div>
       <div className={styles.wrap}>
-        <div className={styles.imageSection}></div>
+        {/*<div className={styles.imageSection}></div>*/}
         <div className={styles.contactForm}>
           {contextHolder}
           <div className={styles.formSection}>

@@ -13,9 +13,10 @@
     max-width: var(--max-width);
     display: flex;
     justify-content: space-between;
-    padding: var(--desktopPadding);
+    width: 50%;
+
 }
-.imageSection {
+/*.imageSection {
     width: 40%;
 
     object-fit: contain;
@@ -34,10 +35,10 @@
     border-bottom-left-radius: 5px;
 
 
-}
+}*/
 
 .contactForm {
-    width: 60%;
+    width: 100%;
 
 }
 
@@ -132,7 +133,7 @@
 
 .dateSelector {
     position: relative;
-    width: 80%;
+    width: 100%;
     display: flex;
     margin-bottom: 25px;
     justify-content: space-between;
@@ -142,8 +143,8 @@
     /*margin-bottom: 25px;*/
 }
 
-.mandatoryTextWrap {
-    width: 80%;
+.mandatoryTextWrap, .buttonWrap {
+    width: 100%;
     text-align: center;
 }
 
@@ -159,16 +160,15 @@ textarea.input {
 
 .captcha {
     /*transform: scale(1);*/
-    transform-origin: 50% 50%;
+    /*transform-origin: 50% 50%;*/
     justify-content: center;
     display: flex;
-    width: 80%;
+    width: 100%;
 }
 
 .buttonWrap {
-    margin: 20px 0;
-    width: 80%;
-    text-align: center;
+   margin: 20px 0;
+
 }
 
 .button {
@@ -200,7 +200,7 @@ textarea.input {
     outline: none;
     margin-bottom: 25px;
     display: flex;
-    width: 80%;
+    width: 100%;
     flex-direction: column;
     text-align: left;
     /*padding: 5px;*/
@@ -230,21 +230,18 @@ textarea.input {
 
 
 @media screen and (max-width: 992px) {
-    .set, .dateSelector {
-        width: 100%;
-    }
+
     .dateSelectorField {
         width: auto;
     }
     .container {
         padding: 0;
     }
-    .dateSelector {
-        display: block;
-    }
+
 
     .wrap {
-        border-radius: 0;
+        width: 80%;
+
     }
 
 }
@@ -275,7 +272,10 @@ textarea.input {
     .wrap {
         padding: 0;
         flex-direction: column;
+        width: 100%;
+        border-radius: 0;
     }
+
 
     .contactForm {
         width: 100%;
@@ -289,12 +289,6 @@ textarea.input {
     .mandatoryTextWrap, .buttonWrap, .captcha {
         width: 100%;
     }
-
-}
-
-
-
-@media screen and (max-width: 768px) {
     .imageSection {
         display: none;
     }
@@ -309,12 +303,18 @@ textarea.input {
         border-bottom-left-radius: 5px;
         /*box-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);*/
     }
+
 }
 
 @media screen and (max-width: 576px) {
     .label {
         width: 10%;
     }
+
+    .dateSelector {
+        display: block;
+    }
+
 
     .container {
         margin: 0 auto 0;
@@ -331,6 +331,7 @@ textarea.input {
 
     .subHeader {
         font-size: 16px;
+        text-align: center;
     }
     .formSection {
         padding: 5px;
