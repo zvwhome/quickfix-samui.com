@@ -1,11 +1,17 @@
 .container {
-    max-width: var(--max-width);
     margin: auto;
     padding: var(--desktopPadding);
-    height: 450px;
+    height: 100px;
+    background-color: #e7e7e7;
+
 }
 
-
+.contactsSection {
+    display: flex;
+    max-width: var(--max-width);
+    margin: auto;
+    justify-content: space-between;
+}
 
 .chatBlock {
     height: 0;
@@ -22,7 +28,7 @@
 .absolute {
     position: absolute;
     right: 1%;
-    bottom: 450px;
+    bottom: 100px;
 }
 
 .chatContainer {
@@ -69,12 +75,8 @@
 }
 
 
-.contactsSection {
-    display: flex;
-    justify-content: space-between;
-}
+
 .addressSection {
-    width: 40%;
     display: flex;
     justify-content: space-between;
     text-align: left;
@@ -99,8 +101,14 @@
 
 
 .menuSection {
-    width: 20%;
+    width: 40%;
     text-align: left;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menuSubSection {
+    justify-content: space-between;
 }
 
 .menuItem {
@@ -108,6 +116,8 @@
 
     display: block;
     margin-bottom: 5px;
+    text-align: left;
+    white-space: nowrap;
 
 }
 
@@ -159,12 +169,9 @@
 
 @media screen and (max-width: 768px) {
     .container {
-        height: 520px;
         padding: var(--mobilePadding);
     }
-    .absolute {
-        bottom: 520px;
-    }
+
     .product {
         text-align: center;
         margin-bottom: 15px;
@@ -176,16 +183,22 @@
     }
 
     .addressSection {
-        display: block;
-        width: 100%;
+        display: flex;
+        width: 50%;
         margin: auto;
         text-align: center;
     }
+    .addressSubsection {
+        width: 100%;
+        text-align: center;
+    }
     .contactsSection {
-        display: block;
+        flex-direction: column-reverse;
+        width: 100%;
+        /*display: block;
         width: 100%;
         margin: auto;
-        text-align: center;
+        text-align: center;*/
     }
 
     .menuSection {
@@ -206,13 +219,14 @@
         display: block;
         width: 100%;
 
-        text-align: center;
     }
 
     .menuItem {
         text-decoration: underline var(--main-background-button-color);
         text-underline-offset: 2px;
-        margin-bottom: 10px;
+        text-align: center;
+        margin: 0 auto 10px;
+    ;
     }
 
     .menuItem:before {
@@ -253,7 +267,21 @@
 
 @media screen and (max-width: 386px){
     .addressSubsection {
-        font-size: 14px;
+        font-size: 9px;
+        letter-spacing: unset;
+    }
+    .menuSubSection {
+        width: 100%;
+
+    }
+
+    .menuSection {
+        display: block;
+    }
+
+    .menuItem {
+        width: 100%;
+        text-align: center;
     }
 }
 
@@ -263,6 +291,9 @@
         width: 100%;
         /*right: 0;*/
 
+    }
+    .addressSubsection {
+        font-size: 8px;
     }
     .chatBtn {
         width: 100%;

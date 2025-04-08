@@ -1,9 +1,9 @@
 "use client";
 import styles from "./contact.module.css";
 import ReCAPTCHA from "react-google-recaptcha";
-import { useForm, Controller } from "react-hook-form";
+import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import ReactDatePicker, { CalendarContainer } from "react-datepicker";
+import { CalendarContainer } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import * as yup from "yup";
 import { message } from "antd";
@@ -11,8 +11,13 @@ import { message } from "antd";
 import { useEffect, useRef, useState } from "react";
 
 import emailjs from "@emailjs/browser";
-
-import clsx from "clsx";
+import MapPage from "@/app/ui/map/map";
+import Link from "next/link";
+import Image from "next/image";
+import inst from "@/public/inst.png";
+import fb from "@/public/fb.png";
+import wa from "@/public/wa.png";
+import mailIco from "@/public/mail.png";
 
 export default function Contact() {
   const [messageApi, contextHolder] = message.useMessage();
@@ -154,7 +159,6 @@ export default function Contact() {
     <div id={"contactWrap"} className={styles.container}>
       <div id={"contact"}></div>
       <div className={styles.wrap}>
-        {/*<div className={styles.imageSection}></div>*/}
         <div className={styles.contactForm}>
           {contextHolder}
           <div className={styles.formSection}>
@@ -186,7 +190,6 @@ export default function Contact() {
                   <span className={styles.star}>*</span>
                   <p className={styles.errorMessage}>{errors.mail?.message}</p>
                 </div>
-
                 <div className={styles.set}>
                   <input
                     id={"phone"}
@@ -197,11 +200,11 @@ export default function Contact() {
                     aria-invalid={errors.phone ? "true" : "false"}
                   />
                 </div>
-                <h3 className={styles.subHeader}>{"YOUR CONTACT SCHEDULE"}</h3>
-                <div className={styles.dateSelector}>
+                {/*<h3 className={styles.subHeader}>{"YOUR CONTACT SCHEDULE"}</h3>*/}
+
+                {/*<div className={styles.dateSelector}>
                   <div
                     className={styles.dateSelectorField}
-                    //className={styles.set}
                     style={{
                       display: "flex",
                       flexDirection: "row",
@@ -258,7 +261,6 @@ export default function Contact() {
 
                   <div
                     className={styles.dateSelectorField}
-                    /*className={styles.set}*/
                     style={{
                       display: "flex",
                       flexDirection: "row",
@@ -315,6 +317,7 @@ export default function Contact() {
                     />
                   </div>
                 </div>
+                */}
               </div>
 
               <div className={styles.set}>
@@ -352,6 +355,52 @@ export default function Contact() {
               />
             </form>
           </div>
+        </div>
+
+        <div className={styles.contactSection}>
+          <h2 className={styles.header}>CONTACT US DIRECTLY</h2>
+          <div className={styles.socialSection}>
+            <a
+              href={
+                "https://instagram.com/quickfixsamui?igshid=MzMyNGUyNmU2YQ=="
+              }
+              target={"_blank"}
+            >
+              <Image
+                className={styles.socialIcon}
+                src={inst}
+                alt={"Instagram"}
+              />
+            </a>
+            <a
+              href={
+                "https://www.facebook.com/profile.php?id=61552961145624&mibextid=LQQJ4d"
+              }
+              target={"_blank"}
+            >
+              <Image className={styles.socialIcon} src={fb} alt={"Facebook"} />
+            </a>
+            <a href={"https://wa.me/66649963987"} target={"_blank"}>
+              <Image className={styles.socialIcon} src={wa} alt={"Whatsapp"} />
+            </a>
+            <a href={"mailto:info@quickfix-samui.com"} target={"_blank"}>
+              <Image
+                className={styles.socialIcon}
+                src={mailIco}
+                alt={"Email"}
+              />
+            </a>
+          </div>
+          <div className={styles.addressSubsection}>
+            <a className={styles.link} href={"mailto:info@quickfix-samui.com"}>
+              info@quickfix-samui.com
+            </a>
+            <a className={styles.link} href={"tel:+66649963987"}>
+              +66 (0) 649 963 987
+            </a>
+          </div>
+
+          <MapPage />
         </div>
       </div>
     </div>

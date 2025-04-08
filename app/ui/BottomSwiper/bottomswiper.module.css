@@ -2,6 +2,9 @@
 .container {
     width: 100%;
     margin: auto;
+    border: 2px solid var(--main-background-button-color);
+    max-width: var(--max-width);
+
 }
 
 .sliderWrap {
@@ -15,4 +18,10 @@
     height: 100%;
     object-fit: contain;
     font-size: 0;
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+
+    }
 }

@@ -1,23 +1,27 @@
 .container {
-    margin: 0 auto 25px;
+    margin: auto ;
     width: 100%;
-    padding: 25px 10px 50px;
-    background-color: var(--main-background-dark-color);
+    padding: var(--desktopPadding);
+    /*background-color: var(--main-background-dark-color);*/
+    border-bottom: 2px solid var(--main-background-button-color);
+    max-width: var(--max-width);
 }
 
 .inner {
     text-align: center;
     margin: auto;
-    max-width: var(--max-width);
+
     display: flex;
     flex-direction: column;
-    align-items: center;
+    /*align-items: center;-*/
+
 }
 
 .mainHeader {
     font-weight: 400;
-    color: white;
+    color: var(--main-background-grey-color);
     margin-bottom: 50px;
+    text-align: left;
 
 }
 
@@ -38,14 +42,14 @@
 }
 
 .cardHeader {
-    font-size: 1em;
-    color: white;
+    font-size: 1.3em;
+    color: var(--main-background-grey-color);
     white-space: nowrap;
 }
 
 .cardDescription {
-    font-size: .85em;
-    color: white;
+    font-size: 1.1em;
+    color: var(--main-background-grey-color);
     text-align: left;
 }
 
@@ -58,7 +62,7 @@
 
 @media screen and (max-width: 992px) {
     .cardHeader {
-        font-size: 0.8em;
+       /* font-size: 0.8em;*/
     }
 
     .cardSection {
@@ -78,6 +82,7 @@
 @media screen and (max-width: 576px) {
 
     .container {
+        padding: var(--mobilePadding);
         margin: 0 ;
 
     }
@@ -86,12 +91,9 @@
         grid-template-columns: repeat(1, 1fr);
         margin: 0;
         gap: 1rem;
-
-
     }
-    .card {
-        font-size: 16px;
-        /*width: 30%;*/
+    .cardDescription {
+        text-align: justify;
     }
 
     .cardHeader {
@@ -100,13 +102,14 @@
     }
 
     .cardImg {
-        width: 50px;
-        height: 50px;
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
     }
 
     .mainHeader {
         width: 100%;
-        font-size: 18px;
+        font-size: 22px;
         margin-bottom: 10px;
 
     }

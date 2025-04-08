@@ -1,6 +1,5 @@
 "use client";
 import styles from "./services.module.css";
-import security from "public/security.webp";
 import paint from "public/paint.webp";
 import tiling from "public/tilling.webp";
 import metal from "public/metal.webp";
@@ -8,7 +7,7 @@ import construction from "public/construction.webp";
 import airCon from "public/aircon.webp";
 import sanitary from "public/sanitary.webp";
 import windows from "public/windows.webp";
-import electricity from "public/electicity.webp";
+import electricity from "public/electricity.webp";
 import Image from "next/image";
 
 export default function Services() {

@@ -3,6 +3,7 @@
     margin: 0 auto;
     width: 100%;
     position: relative;
+    max-width: var(--max-width);
 }
 
 .heroImg {
@@ -20,7 +21,6 @@
 
 .player {
     z-index: 1;
-    aspect-ratio: 16/9;
 }
 
 

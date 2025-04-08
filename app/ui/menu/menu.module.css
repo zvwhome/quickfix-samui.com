@@ -19,7 +19,7 @@
     width: 100%;
     max-width: var(--max-width);
     margin: auto;
-    padding: 10px;
+    padding: var(--desktopPadding);
 }
 
 .logoSection {
