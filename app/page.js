@@ -9,10 +9,10 @@ export default function Home() {
   return (
     <>
       <Hero />
-      <Services />
+      {<Services />}
       <About />
-      <Contact />
-      <BottomSwiper />
+      {<Contact />}
+      {/*<BottomSwiper />*/}
     </>
   );
 }

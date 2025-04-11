@@ -399,8 +399,9 @@ export default function Contact() {
               +66 (0) 649 963 987
             </a>
           </div>
-
-          <MapPage />
+          <div className={styles.mapPage}>
+            <MapPage />
+          </div>
         </div>
       </div>
     </div>

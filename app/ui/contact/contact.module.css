@@ -1,7 +1,9 @@
 .container {
     max-width: var(--max-width);
     width: 100%;
-    padding: 20px 10px 0 10px;
+    padding: var(--desktopPadding);
+    margin-bottom: 50px;
+
 }
 
 .wrap {
@@ -18,7 +20,7 @@
     object-fit: contain;
     padding: 0 25px;
     text-align: center;
-
+    border-left: 1px solid var(--main-background-button-color);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -68,7 +70,7 @@
     padding-right: 25px;
     /*border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;*/
-    border-right: 1px solid var(--main-background-button-color);
+
     margin-bottom: 25px;
 /*    color: white;*/
 
@@ -99,6 +101,10 @@
     right: 0;
 }
 
+.mapPage {
+    margin: auto;
+    width: 70%;
+}
 
 
 .mandatoryText {
@@ -265,6 +271,10 @@ textarea.input {
 }
 
 @media screen and (max-width: 768px) {
+    .container {
+        margin: 0 auto 0;
+
+    }
     .dateSelectorField:first-child {
         margin-bottom: 25px;
     }
@@ -276,9 +286,15 @@ textarea.input {
         text-align: center;
     }
 
+    .mapPage {
+        width: 100%;
+
+    }
+
     .contactSection {
         width: 100%;
         padding: 0;
+        border: none;
     }
 
     .subHeader {
@@ -350,10 +366,7 @@ textarea.input {
     }
 
 
-    .container {
-        margin: 0 auto 0;
 
-    }
     .wrap {
         /*padding: var(--mobilePadding);*/
         border-radius: 0;
