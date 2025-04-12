@@ -358,7 +358,9 @@ export default function Contact() {
         </div>
 
         <div className={styles.contactSection}>
-          <h2 className={styles.header}>CONTACT US DIRECTLY</h2>
+          <h2 className={styles.header} style={{ textAlign: "center" }}>
+            CONTACT US DIRECTLY
+          </h2>
           <div className={styles.socialSection}>
             <a
               href={

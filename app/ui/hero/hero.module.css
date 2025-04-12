@@ -1,6 +1,6 @@
 .container {
     text-align: center;
-    margin: 0 auto;
+    margin: 124px auto 0;
     width: 100%;
     position: relative;
     max-width: var(--max-width);
@@ -31,3 +31,8 @@
     aspect-ratio: 16/9;
 }
 
+@media screen and (max-width: 768px) {
+    .container {
+        margin: 58px auto 0;
+    }
+}
