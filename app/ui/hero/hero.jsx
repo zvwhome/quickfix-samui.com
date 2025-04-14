@@ -25,6 +25,7 @@ export default function Hero() {
             priority={true}
           />
         )}
+
         {hasWindow && (
           <>
             <ReactPlayer
