@@ -15,8 +15,15 @@
     left:0;
     background: transparent;
     z-index: 1;
-    aspect-ratio: 16/9;
 }
+
+.videoFrame {
+    position: relative;
+    overflow:hidden;
+    background: transparent;
+    aspect-ratio: 16/5;
+}
+
 
 
 .player {
@@ -24,14 +31,11 @@
 }
 
 
-.videoFrame {
-    position: relative;
-    overflow:hidden;
-    background: transparent;
-    aspect-ratio: 16/9;
-}
 
 @media screen and (max-width: 768px) {
+    .videoFrame {
+        aspect-ratio: 16/9;
+    }
     .container {
         margin: 58px auto 0;
     }
