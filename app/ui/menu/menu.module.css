@@ -1,6 +1,7 @@
 .container {
     transition: all .5s linear;
-    background: transparent;
+    /*background: transparent;*/
+    background-color: white;
 }
 
 .scrolled {

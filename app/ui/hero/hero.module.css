@@ -1,9 +1,11 @@
 .container {
     text-align: center;
-    margin: 124px auto 0;
+    margin: 10px auto -125px;
     width: 100%;
     position: relative;
     max-width: var(--max-width);
+    z-index: -10;
+
 }
 
 .heroImg {
@@ -21,13 +23,14 @@
     position: relative;
     overflow:hidden;
     background: transparent;
-    aspect-ratio: 16/5;
+    /*aspect-ratio: 16/5;*/
 
 }
 
 
 
 .player {
+    margin: auto;
     z-index: 1;
     object-fit: cover;
 }
@@ -42,3 +45,4 @@
         margin: 58px auto 0;
     }
 }
+

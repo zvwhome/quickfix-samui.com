@@ -2,6 +2,7 @@
 import styles from "./hero.module.css";
 import Image from "next/image";
 import hero from "public/hero.webp";
+import shape from "public/shape.png";
 import ReactPlayer from "react-player/file";
 import { useEffect, useState } from "react";
 
@@ -17,6 +18,7 @@ export default function Hero() {
   return (
     <div className={styles.container}>
       <div className={styles.videoFrame}>
+        {/*<Image className={styles.heroImg} src={shape} alt={"Video cover"} />*/}
         {!play && (
           <Image
             className={styles.heroImg}

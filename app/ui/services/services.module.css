@@ -2,6 +2,7 @@
     margin: auto ;
     width: 100%;
     padding: var(--desktopPadding);
+    background-color: white;
     /*background-color: var(--main-background-dark-color);*/
     border-bottom: 2px solid var(--main-background-button-color);
     max-width: var(--max-width);
