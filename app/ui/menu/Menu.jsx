@@ -3,7 +3,7 @@ import styles from "./menu.module.css";
 import clsx from "clsx";
 import Link from "next/link";
 import { useLayoutEffect, useState } from "react";
-import logo from "../../../public/logo.png";
+import logo from "../../../public/logo.svg";
 import Image from "next/image";
 
 export default function Menu() {
@@ -30,7 +30,7 @@ export default function Menu() {
 
   const containerClass = clsx(
     styles.container,
-    scrolled && styles.scrolled,
+    /*scrolled && styles.scrolled,*/
     open && styles.openDrawer,
   );
 
@@ -49,22 +49,22 @@ export default function Menu() {
   };
 
   useLayoutEffect(() => {
-    if (window.scrollY > 70) {
+    /*if (window.scrollY > 70) {
       setScrolled(true);
     }
     window.addEventListener("scroll", function () {
       if (window.scrollY > 10) {
         setScrolled(true);
       } else setScrolled(false);
-    });
+    });*/
     window.addEventListener("resize", () => {
       setOpen(false);
     });
     return () => {
       window.removeEventListener("scroll", function () {
-        if (window.scrollY > 10) {
+        /*if (window.scrollY > 10) {
           setScrolled(true);
-        } else setScrolled(false);
+        } else setScrolled(false);*/
       });
       window.removeEventListener("resize", () => {
         setOpen(false);

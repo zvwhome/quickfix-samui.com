@@ -29,7 +29,7 @@
 
 
 .logoImgContent  {
-    width: 50%;
+    width: 40%;
     height: auto;
     margin-right: 5px;
 
@@ -241,6 +241,9 @@
         padding: 5px 0;
     }
 
+    .logoContainer {
+        transform: translateX(-10px);
+    }
 
     .logoItem, .logoContainer {
         width: auto;
