@@ -7,7 +7,7 @@ import logo from "../../../public/logo.svg";
 import Image from "next/image";
 
 export default function Menu() {
-  const [scrolled, setScrolled] = useState(false);
+  //  const [scrolled, setScrolled] = useState(false);
 
   const [open, setOpen] = useState(false);
 
